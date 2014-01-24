@@ -1,5 +1,5 @@
 Name:                yesod-fb
-Version:             0.3
+Version:             0.4
 Synopsis:            Useful glue functions between the fb library and Yesod.
 Homepage:            https://github.com/meteficha/yesod-fb
 License:             BSD3
@@ -24,17 +24,16 @@ Source-repository head
 Library
   hs-source-dirs: src
 
-  Build-depends:   base         >= 4.3     && < 5
-                 , yesod-core   == 1.2.*
-                 , fb           >= 0.11.1  && < 0.15
-
-                 , crypto-api
-                 , http-conduit
-                 , wai
-                 , conduit
-                 , aeson
-                 , text
-                 , bytestring
+  Build-depends: base                          >= 4          && < 5
+               , yesod-core                    >= 1.2        && < 1.3
+               , bytestring                    >= 0.9        && < 0.11
+               , text                          >= 0.11       && < 2.0
+               , http-conduit                  >= 2.0        && < 2.1
+               , aeson                         >= 0.6        && < 0.8
+               , conduit                       >= 1.0        && < 2.0
+               , fb                            == 0.15
+               , wai
+               , crypto-api
 
   Exposed-modules: Yesod.Facebook
   GHC-options: -Wall
